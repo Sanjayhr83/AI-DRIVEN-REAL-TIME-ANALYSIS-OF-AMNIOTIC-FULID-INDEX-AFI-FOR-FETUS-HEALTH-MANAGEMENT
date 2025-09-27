@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFI Analyzer - Advanced Edition</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="/static/app.js" defer onerror="(function(){var s=document.createElement('script');s.src='../../backend/static/app.js';s.defer=true;document.head.appendChild(s);})()"></script>
+</head>
+<body>
+
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <picture>
+                        <source srcset="{{ url_for('static', filename='logo.webp') }}" type="image/webp">
+                        <source srcset="{{ url_for('static', filename='logo.jpg') }}" type="image/jpeg">
+                        <img id="appLogo" src="../../backend/static/logo.webp" alt="FetalCare AI Logo" width="40" height="40" onerror="this.onerror=null; this.src='../../backend/static/logo.jpg';">
+                    </picture>
+                </div>
+                AFI for FetalCare 
+            </div>
+            <ul class="nav-links">
+                <li><a href="#dashboard" class="nav-link active">Dashboard</a></li>
+                <li><a href="#analysis" class="nav-link">Analysis</a></li>
+                <li><a href="#reports" class="nav-link">Reference</a></li>
+                <li><a href="#guidelines" class="nav-link">Guidelines</a></li>
+                <li><a href="#patients" class="nav-link">Patients</a></li>
+                <li><a href="#settings" class="nav-link">Settings</a></li>
+            </ul>
+            <div class="toggle">
+                <label style="display:flex; align-items:center; gap:.5rem; font-size:.9rem; color: white;">
+                    <input type="checkbox" id="darkModeToggle"> Dark Mode
+                </label>
+            </div>
+            <div class="nav-actions">
+                <a href="#login" class="btn" id="loginBtn">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <h1>AI-Driven AFI Analysis</h1>
+            <p>Advanced Amniotic Fluid Index measurement using Artificial Intelligence (AI)</p>
+        </div>
+
+        <div class="dashboard" id="dashboard">
+            <div class="card">
+                <h3 id="guidelines"><span class="icon">📊</span>Clinical Guidelines</h3>
+                <ul class="guidelines-list">
+                    <li>AFI is a semi-quantitative ultrasound method of estimating amniotic fluid around the fetus</li>
+                    <li><strong>Normal AFI:</strong> 8-18 cm range</li>
+                    <li><strong>Oligohydramnios:</strong> AFI below 5 cm (low fluid)</li>
+                    <li><strong>Polyhydramnios:</strong> AFI above 24 cm (high fluid)</li>
+                    <li>Keep probe perpendicular to floor; maintain vertical measurement axis</li>
+                    <li>Ensure pockets exclude fetal parts or cord; use Doppler if needed</li>
+                    <li>Consider patient hydration status and maternal position</li>
+                    <li>Use consistent measurement technique for reliability</li>
+                    <li>Document findings and correlate with clinical data</li>
+                    <li>Consult specialist for complex cases</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3><span class="icon">🛠️</span>Image Preparation</h3>
+                <ul class="guidelines-list">
+                    <li><strong>Upload</strong> your scanning image or <strong>drag and drop</strong> it here</li>
+                    <li>Begin with ultrasound images generated from the machine.</li>
+                    <li>Process images to identify key features and measurements.</li>
+                    <li>Run AI analysis to detect abnormalities and provide insights.</li>
+                    <li>Review results displayed in an easy-to-understand format.</li>
+                    <li>Clinicians validate and interpret the findings.</li>
+                    <li>Generate reports to share with patients and records.</li>
+                    <li>Label and organize all images consistently.</li>
+                    <li>Store data securely and comply with privacy policies.</li>
+                    <li>Back up data regularly to prevent loss.</li>
+                </ul>
+            </div>
+            
+            <div class="card" id="analysis">
+                <h3><span class="icon">🎯</span>Quick Analysis</h3>
+                <div class="upload-section">
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-icon">📷</div>
+                        <h4>Upload scanning image</h4>
+                        <p>Drag and drop your ultrasound images here or click to browse</p>
+                        <div style="margin-top:1rem;">
+                            <button type="button" class="btn" id="uploadBtn">Browse Files</button>
+                        </div>
+                    </div>
+
+                    <input type="file" id="fileInput" class="file-input" accept="image/*" multiple>
+                    
+                    <div class="file-preview" id="previewGrid"></div>
+
+                    <div class="progress-bar" id="progressBar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    
+                    <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; margin-top: 1.5rem;">
+                        <button class="btn" id="analyzeBtn" disabled>🔍 Analyze Images</button>
+                        <button class="btn" id="downloadReportBtn" disabled style="background: linear-gradient(135deg, var(--success), var(--accent-green));">📥 Download Report</button>
+                        <button class="btn" id="clearHistoryBtn" style="background: linear-gradient(135deg, var(--danger), #dc2626);">🗑️ Clear History</button>
+                        <button class="btn" id="clearSelectionBtn" style="background: linear-gradient(135deg, var(--gray), #475569);">❌ Clear Selection</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="results-section" id="resultsSection">
+            <h3><span class="icon">📈</span>Analysis Results</h3>
+            <div id="perFileResults"></div>
+            <div class="afi-meter">
+                <h4>AFI Measurement</h4>
+                <div class="meter-display" id="afiValue">--</div>
+                <div class="meter-bar">
+                    <div class="meter-indicator" id="meterIndicator"></div>
+                </div>
+                <div id="statusBadges"></div>
+                <p id="interpretation" style="color: var(--gray); margin-top: 1rem; font-size: 1.1rem; line-height: 1.6;"></p>
+            </div>
+        </div>
+
+        <div class="card" id="patients">
+            <h3><span class="icon">👥</span>Patients</h3>
+            <p style="color: var(--gray);">Manage patient records and view associated analyses.</p>
+        </div>
+
+        <div class="card" id="settings">
+            <h3><span class="icon">⚙️</span>Settings</h3>
+            <p style="color: var(--gray);">Configure application preferences and account options.</p>
+        </div>
+
+        <div class="card" id="reports">
+            <h3><span class="icon">🎥</span>Reference Videos</h3>
+            <p style="color: var(--gray); margin-bottom: 1rem; font-size: 1.1rem;">Learn AFI measurement techniques from expert demonstrations</p>
+            <div class="video-grid">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/97HnLJ5Npc0?si=UGJmMcEH8ecqoFrF" title="Advanced Techniques" allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/z78X4RNwmtY?si=9qRhA6czxKel8jFE" title="Case Studies" allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe width="100%" height="220" src="https://www.youtube.com/embed/wXozl95zGx4?si=4YLD9GjfrFUI_CaH" title="Advanced AFI Analysis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe width="100%" height="220" src="https://www.youtube.com/embed/aonx_SmsNUg?si=lPL67mxBcbSu0KD5" title="Clinical Best Practices" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Yt9XRg4DBPc?si=Q0mwk_WRV-kkEyB_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/97HnLJ5Npc0?si=n-dzm0IhAC1M27QI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+        </div>
+
+        <div class="card" id="history">
+            <h3><span class="icon">🕒</span>Analysis History</h3>
+            <div id="historyList">
+                <p style="color: var(--gray); text-align: center; padding: 2rem;">No analysis history available. Upload and analyze images to see results here.</p>
+            </div>
+        </div>
+
+    
+    <footer>
+        <p>&copy; 2026 AFI Analyzer. All rights reserved.</p>
+        <p>Developed by Team SPSY</p>
+        <a href="https://github.com/Sanjay837" target="_blank">github</a>
+    </footer>
+
+<script>
+    // Ensure Browse opens file explorer and advance UI to next step after selection
+    document.addEventListener('DOMContentLoaded', function () {
+        var uploadBtn = document.getElementById('uploadBtn');
+        var fileInput = document.getElementById('fileInput');
+        var analyzeBtn = document.getElementById('analyzeBtn');
+        var analysisSection = document.getElementById('analysis');
+
+        if (uploadBtn && fileInput) {
+            uploadBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                fileInput.click();
+            });
+        }
+
+        if (fileInput) {
+            fileInput.addEventListener('change', function () {
+                if (fileInput.files && fileInput.files.length > 0) {
+                    if (analyzeBtn) analyzeBtn.disabled = false;
+                    if (analysisSection && analysisSection.scrollIntoView) {
+                        analysisSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>
