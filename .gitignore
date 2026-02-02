@@ -2,6 +2,7 @@
 node_modules/
 backend/.venv_new/
 backend/.venv/
+backend/.venv311/
 .venv/
 venv/
 __pycache__/
@@ -9,6 +10,9 @@ __pycache__/
 *.pyo
 *.pyd
 .Python
+
+# Large model files (use Git LFS if needed)
+backend/ml/model/image_model/variables/variables.data-00000-of-00001
 
 # Build outputs
 frontend/build/
