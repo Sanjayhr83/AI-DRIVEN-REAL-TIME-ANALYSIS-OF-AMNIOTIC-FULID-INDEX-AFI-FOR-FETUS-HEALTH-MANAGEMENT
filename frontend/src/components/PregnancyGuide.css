@@ -1,0 +1,450 @@
+/* PregnancyGuide Component Styles */
+
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.pregnancy-guide-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.guide-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.guide-header h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.guide-header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  color: white;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+header .subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+/* Progress Container */
+.progress-container {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.week-counter {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.week-counter span {
+  color: #3498db;
+  font-size: 1.8rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 30px;
+  background-color: #ecf0f1;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #3498db, #2980b9);
+  border-radius: 15px;
+  transition: width 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.baby-size {
+  font-size: 1.1rem;
+  color: #e74c3c;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.trimester {
+  font-size: 1rem;
+  color: #9b59b6;
+  font-weight: 600;
+}
+
+/* Month Selector */
+.month-selector {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.month-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #3498db;
+  background-color: white;
+  color: #3498db;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.month-btn:hover {
+  background-color: #3498db;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.month-btn.active {
+  background-color: #2980b9;
+  color: white;
+  border-color: #2980b9;
+}
+
+/* Content Grid */
+.content-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card li {
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  color: #555;
+  position: relative;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.card li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Progress Bar */
+.progress-section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.progress-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.progress-item {
+  text-align: center;
+}
+
+.progress-item h4 {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.progress-item p {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.progress-bar-container {
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  height: 30px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #3498db, #2980b9);
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: width 0.5s ease;
+}
+
+/* Interactive Section */
+.interactive-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Water Tracker */
+.water-tracker {
+  background: linear-gradient(135deg, #8dc2f1 0%, #b8fbff 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.water-tracker h3 {
+  color: rgb(0, 0, 0);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.water-tracker p {
+  color: rgba(8, 0, 236, 0.9);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.water-cups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.water-cup {
+  aspect-ratio: 1;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.water-cup:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.water-cup.filled {
+  background-color: rgb(0, 0, 0);
+  color: #4facfe;
+}
+
+/* Kick Counter */
+.kick-counter {
+  background: linear-gradient(135deg, #f8b7ff 0%, #ea96a1 100%);
+  color: rgb(255, 255, 255);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.kick-counter h3 {
+  color: rgb(0, 0, 0);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.kick-counter p {
+  color: rgba(0, 0, 0, 0.9);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.counter-display {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: rgb(0, 8, 255);
+}
+
+/* Buttons */
+.kick-btn,
+.reset-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.kick-btn:hover,
+.reset-btn:hover {
+  background-color: white;
+  color: #f5576c;
+}
+
+.reset-btn {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Disclaimer and Footer */
+.disclaimer {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  color: #856404;
+}
+
+.disclaimer p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #7f8c8d;
+  border-top: 1px solid #ecf0f1;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .content-area {
+    grid-template-columns: 1fr;
+  }
+
+  .interactive-section {
+    grid-template-columns: 1fr;
+  }
+
+  .month-selector {
+    gap: 0.3rem;
+  }
+
+  .month-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .counter-display {
+    font-size: 2rem;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+
+  .card li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: slideIn 0.3s ease;
+}

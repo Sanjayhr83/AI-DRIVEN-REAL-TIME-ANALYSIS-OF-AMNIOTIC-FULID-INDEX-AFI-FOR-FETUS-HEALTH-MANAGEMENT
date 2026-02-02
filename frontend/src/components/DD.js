@@ -1,0 +1,162 @@
+// DD - Doctors details
+// Export the array so other components/pages can import and render these records.
+const doctors = [
+    { 
+      id: 1, 
+      name: 'Dr. Chaitra Ramamurthy', 
+      specialty: 'Gynecologist', 
+      experience: '12 years',
+      rating: 4.9,
+      education: 'MBBS, MD - Obstetrics & Gynecology',
+      College: 'St. John\'s Medical College, Bangalore',
+      avatar: 'CR',
+      Hospital: 'Apollo Hospital, Bangalore',
+      map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1184349.7292880204!2d76.55158124192145!3d12.824223856811798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae152152c6edf7%3A0x838c2e0a91221a87!2sApollo%20Hospitals%20Bannerghatta!5e0!3m2!1sen!2sin!4v1764431036482!5m2!1sen!2sin',
+      consultationFee: '₹3500'
+    },
+    { 
+      id: 2, 
+      name: 'Dr. Prakash ', 
+      specialty: 'Radiologist', 
+      experience: '8 years',
+      rating: 4.8,
+      education: 'MBBS, MD - Radiology',
+      College: 'Manipal College of Medical Sciences, Pokhara',
+      avatar: 'MC',
+      Hospital: 'Fortis Hospital, Bangalore',
+      map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.744035681341!2d77.58943467794028!3d12.988216554656473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae166847800b0f%3A0x5670f48c68782ac8!2sFortis%20Hospital%20Bangalore!5e0!3m2!1sen!2sin!4v1764431100208!5m2!1sen!2sin',
+      consultationFee: '₹1500'
+    },
+    { 
+      id: 3, 
+      name: 'Dr. Shailaja', 
+      specialty: 'Radiologist', 
+      experience: '8 years',
+      rating: 4.8,
+      education: 'MBBS, MD - Radiology',
+      College: 'Manipal College of Medical Sciences, Pokhara',
+      avatar: 'MC',
+      Hospital: 'Fortis Hospital, Bangalore',
+      map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.744035681341!2d77.58943467794028!3d12.988216554656473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae166847800b0f%3A0x5670f48c68782ac8!2sFortis%20Hospital%20Bangalore!5e0!3m2!1sen!2sin!4v1764431100208!5m2!1sen!2sin',
+      consultationFee: '₹1200'
+    },
+    { 
+      id: 4, 
+      name: 'Dr. Arun Thangapandy', 
+      specialty: 'General Physician', 
+      experience: '10 years',
+      rating: 4.7,
+      education: 'MBBS, MD - General Medicine',
+      College: 'All India Institute of Medical Sciences, New Delhi',
+      avatar: 'AT',
+      Hospital: 'AIIMS, New Delhi',
+      map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.0855497724165!2d77.20768587528656!3d28.56719367570046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce26f903969d7%3A0x8367180c6de2ecc2!2sAIIMS%20Delhi!5e0!3m2!1sen!2sin!4v1764431253085!5m2!1sen!2sin',
+      consultationFee: '₹1000'
+    }, 
+    {
+      id: 5,
+      name: 'Dr. Vedha Rathod',
+      specialty: 'Gynecologist',
+      experience: '14 years',
+      rating: 4.9,
+      education: 'MBBS, MD - Obstetrics & Gynecology',
+      College: 'St. John\'s Medical College, Bangalore',
+      avatar: 'VR',
+      Hospital: 'Manipal Hospital, Bangalore',
+      map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248845.45892410373!2d77.34396579453126!3d12.958391100000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13c0c0c6206b%3A0x12d8d4c39197c7dd!2sManipal%20Hospitals!5e0!3m2!1sen!2sin!4v1764425369304!5m2!1sen!2sin',
+      consultationFee: '₹2000'
+    },
+    {
+      id: 6,
+      name: 'Dr. Karan Mehta',
+      specialty: 'Radiologist',
+      experience: '9 years',
+      rating: 4.8,
+      education: 'MBBS, MD - Radiology',
+      College: 'Manipal College of Medical Sciences, Pokhara',
+      avatar: 'KM',
+      Hospital: 'Fortis Hospital, Bangalore',
+      map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.744035681341!2d77.58943467794028!3d12.988216554656473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae166847800b0f%3A0x5670f48c68782ac8!2sFortis%20Hospital%20Bangalore!5e0!3m2!1sen!2sin!4v1764431100208!5m2!1sen!2sin',
+      consultationFee: '₹1800'
+    },
+    {
+      id: 7,
+      name: 'Dr. Anjali Singh',
+      specialty: 'Obstetrician',
+      experience: '11 years',
+      rating: 4.7,
+      education: 'MBBS, MD - Obstetrics & Gynecology',
+      College: 'St. John\'s Medical College, Bangalore',
+      avatar: 'AS',
+      Hospital: 'St. John\'s Medical College, Bangalore',
+      map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124465.34273649982!2d77.48388055088435!3d12.87283393051245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae145740fb5c03%3A0xdfd1555fa6880d17!2sSt.%20John\'s%20Medical%20College!5e0!3m2!1sen!2sin!4v1764431364298!5m2!1sen!2sin',
+      consultationFee: '₹1500'
+    },
+      { 
+      id: 8, 
+      name: 'Dr. Shwetha Kamath', 
+      specialty: 'Obstetrician', 
+      experience: '15 years',
+      rating: 4.9,
+      education: 'MBBS, MD - Obstetrics & Gynecology',
+      College: 'St. John\'s Medical College, Bangalore',
+      avatar: 'SK',
+      Hospital: 'Apollo Hospital, Bangalore',
+      map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124465.35551444464!2d77.48388029803512!3d12.872808191650796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae152152c6edf7%3A0x838c2e0a91221a87!2sApollo%20Hospitals%20Bannerghatta!5e0!3m2!1sen!2sin!4v1764431422298!5m2!1sen!2sin',
+      consultationFee: '₹1850'
+    },
+    {
+        id: 9,
+        name: 'Dr. Rohan Iyer',
+        specialty: 'General Physician',
+        experience: '2 years',
+        rating: 4.6,
+        education: 'MBBS, MD - General Medicine',
+        College: 'All India Institute of Medical Sciences, New Delhi',
+        avatar: 'RI',
+        Hospital: 'AIIMS, New Delhi',
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.0855497724165!2d77.20768587528656!3d28.56719367570046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce26f903969d7%3A0x8367180c6de2ecc2!2sAIIMS%20Delhi!5e0!3m2!1sen!2sin!4v1764431253085!5m2!1sen!2sin',
+        consultationFee: '₹900'
+    },
+    {
+        id: 10,
+        name: 'Dr. Meera Nair',
+        specialty: 'Gynecologist',
+        experience: '13 years',
+        rating: 4.8,
+        education: 'MBBS, MD - Obstetrics & Gynecology',
+        College: 'St. John\'s Medical College, Bangalore',
+        avatar: 'MN',
+        Hospital: 'Apollo Hospital, Bangalore',
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124465.35551444464!2d77.48388029803512!3d12.872808191650796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae152152c6edf7%3A0x838c2e0a91221a87!2sApollo%20Hospitals%20Bannerghatta!5e0!3m2!1sen!2sin!4v1764431422298!5m2!1sen!2sin',
+        consultationFee: '₹3000'
+    },
+    {
+        id: 11,
+        name: 'Dr. Aditya Sinha',
+        specialty: 'Radiologist',
+        experience: '9 years',
+        rating: 4.7,
+        education: 'MBBS, MD - Radiology',
+        College: 'Manipal College of Medical Sciences, Pokhara',
+        avatar: 'AS',
+        Hospital: 'Manipal Hospital, Bangalore',
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124465.36829234073!2d77.48388004518584!3d12.872782452837068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13c0c0c6206b%3A0x12d8d4c39197c7dd!2sManipal%20Hospitals!5e0!3m2!1sen!2sin!4v1764431557797!5m2!1sen!2sin',
+        consultationFee: '₹1400'
+    },
+    {
+        id: 12,
+        name: 'Dr. Priya Desai',
+        specialty: 'Obstetrician',
+        experience: '10 years',
+        rating: 4.8,
+        education: 'MBBS, MD - Obstetrics & Gynecology',
+        College: 'St. John\'s Medical College, Bangalore',
+        avatar: 'PD',
+        Hospital: 'St. John\'s Medical College, Bangalore',
+        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.6388603126466!2d77.61713677484055!3d12.930917287380709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae145740fb5c03%3A0xdfd1555fa6880d17!2sSt.%20John\'s%20Medical%20College!5e0!3m2!1sen!2sin!4v1764431621489!5m2!1sen!2sin',
+        consultationFee: '₹1500'
+    }
+  ];
+
+  export default doctors;
