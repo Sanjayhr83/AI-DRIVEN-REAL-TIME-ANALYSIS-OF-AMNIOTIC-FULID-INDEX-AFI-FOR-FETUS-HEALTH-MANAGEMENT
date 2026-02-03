@@ -1,0 +1,11 @@
+# AFI-for-Fetus-Health-Management
+Run this project using below commands
+
+backend:
+$env:MONGO_URL = 'mongodb://localhost:27017'
+cd c:\project\Application-main\backend
+& 'c:\project\Application-main\backend\.venv_new\Scripts\python.exe' -m uvicorn app.main:app --reload --port 8000
+
+frontend:
+cd frontend
+npm start
