@@ -1,4 +1,4 @@
-# AFI-for-Fetus-Health-Management
+#**AFI-for-Fetus-Health-Management**
 Real time analysis of AFI for fetus health management
 I'm currently working this project, Few month later am update complete details about this project with Code also.
 
@@ -19,7 +19,7 @@ including AFI value and a diagnostic interpretation (e.g., low, normal, or high)
 reduces human error, speeds up diagnosis, and provides a reliable decision-support tool to 
 healthcare professionals for improved prenatal care.
 
-#Introduction
+#**Introduction**
 Amniotic fluid serves as a protective cushion for the fetus and facilitates proper development 
 throughout pregnancy. Monitoring the volume and distribution of this fluid is vital for 
 identifying pregnancy-related complications. The Amniotic Fluid Index (AFI) is a quantitative 
@@ -35,7 +35,7 @@ automatically, and the system calculates the AFI by analyzing the output segment
 project further integrates this AI model into a user-friendly web application. Users can upload 
 ultrasound images through the interface and receive real-time analysis
 
-#PROBLEM STATEMENT
+#**PROBLEM STATEMENT**
 Amniotic Fluid Index (AFI) is a critical parameter used in prenatal care to assess the health and 
 development of the fetus. Accurate measurement of AFI is essential for diagnosing conditions 
 like oligohydramnios (low amniotic fluid) and polyhydramnios (excess amniotic fluid), which 
@@ -60,7 +60,7 @@ improve the quality of maternal and fetal care—particularly in under-resourced
 healthcare environments. 
 **Proposed Solution**: An AI-powered, web-based system for automated, accurate, and real-time AFI classification.
 
-#CONCLUSION
+#**CONCLUSION**
 The integration of artificial intelligence into medical imaging and diagnostics holds immense 
 promise, especially in critical areas such as prenatal care. This project has successfully 
 demonstrated the feasibility and effectiveness of an AI-driven system for real-time analysis of 
@@ -75,3 +75,19 @@ The integration of this model into a web-based application allowed for seamless 
 real-time processing, and immediate feedback to the clinician. This not only speeds up the 
 diagnostic workflow but also makes the system accessible and usable even in low-resource or 
 remote settings where expert radiological services may not be readily available. 
+
+#**REFERENCES**
+Automated ultrasound assessment of amniotic fluid index using deep learning - PubMed 
+Deep Learning-Based Computer-Aided Classification of Amniotic Fluid Using Ultrasound 
+Images from Saudi Arabia 
+Fetal biometry and amniotic fluid volume assessment end-to-end automation using Deep 
+Learning | Nature Communications 
+U-Net Tuning Hyperparameter for Segmentation in Amniotic Fluid Ultrasonography Image | 
+Semantic Scholar 
+Amniotic Fluid Classification and Artificial Intelligence: Challenges and Opportunities - 
+PMC 
+Amniotic fluid segmentation based on pixel classification using local window information 
+and distance angle pixel - ScienceDirect 
+AFNet Algorithm for Automatic Amniotic Fluid Segmentation from Fetal MRI 
+(PDF) Deep Learning Based Detection and Classification of Amniotic Fluid Echogenicity 
+Type for Enhanced Prenatal Diagnosis
