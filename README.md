@@ -61,7 +61,7 @@ improve the quality of maternal and fetal care—particularly in under-resourced
 healthcare environments. 
 **Proposed Solution**: An AI-powered, web-based system for automated, accurate, and real-time AFI classification.
 
-#**CONCLUSION**
+#**CONCLUSION**:
 The integration of artificial intelligence into medical imaging and diagnostics holds immense 
 promise, especially in critical areas such as prenatal care. This project has successfully 
 demonstrated the feasibility and effectiveness of an AI-driven system for real-time analysis of 
@@ -77,7 +77,7 @@ real-time processing, and immediate feedback to the clinician. This not only spe
 diagnostic workflow but also makes the system accessible and usable even in low-resource or 
 remote settings where expert radiological services may not be readily available. 
 
-#**REFERENCES**
+#**REFERENCES**:
 Automated ultrasound assessment of amniotic fluid index using deep learning - PubMed 
 Deep Learning-Based Computer-Aided Classification of Amniotic Fluid Using Ultrasound 
 Images from Saudi Arabia 
