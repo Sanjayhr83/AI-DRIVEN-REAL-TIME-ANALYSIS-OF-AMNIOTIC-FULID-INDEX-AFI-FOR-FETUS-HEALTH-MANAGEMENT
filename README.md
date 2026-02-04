@@ -1,8 +1,9 @@
 #**AFI-for-Fetus-Health-Management**
+
 Real time analysis of AFI for fetus health management
 I'm currently working this project, Few month later am update complete details about this project with Code also.
 
-#Abstract
+**#Abstract:**
 The Amniotic Fluid Index (AFI) is a crucial biometric used in obstetric ultrasound to assess fetal 
 well-being during pregnancy. Accurate evaluation of the AFI helps in detecting potential 
 complications such as oligohydramnios (too little amniotic fluid) or polyhydramnios (too much 
@@ -19,7 +20,7 @@ including AFI value and a diagnostic interpretation (e.g., low, normal, or high)
 reduces human error, speeds up diagnosis, and provides a reliable decision-support tool to 
 healthcare professionals for improved prenatal care.
 
-#**Introduction**
+#**Introduction**:
 Amniotic fluid serves as a protective cushion for the fetus and facilitates proper development 
 throughout pregnancy. Monitoring the volume and distribution of this fluid is vital for 
 identifying pregnancy-related complications. The Amniotic Fluid Index (AFI) is a quantitative 
@@ -35,7 +36,7 @@ automatically, and the system calculates the AFI by analyzing the output segment
 project further integrates this AI model into a user-friendly web application. Users can upload 
 ultrasound images through the interface and receive real-time analysis
 
-#**PROBLEM STATEMENT**
+#**PROBLEM STATEMENT**:
 Amniotic Fluid Index (AFI) is a critical parameter used in prenatal care to assess the health and 
 development of the fetus. Accurate measurement of AFI is essential for diagnosing conditions 
 like oligohydramnios (low amniotic fluid) and polyhydramnios (excess amniotic fluid), which 
@@ -84,8 +85,7 @@ Fetal biometry and amniotic fluid volume assessment end-to-end automation using 
 Learning | Nature Communications 
 U-Net Tuning Hyperparameter for Segmentation in Amniotic Fluid Ultrasonography Image | 
 Semantic Scholar 
-Amniotic Fluid Classification and Artificial Intelligence: Challenges and Opportunities - 
-PMC 
+Amniotic Fluid Classification and Artificial Intelligence: Challenges and Opportunities - PMC 
 Amniotic fluid segmentation based on pixel classification using local window information 
 and distance angle pixel - ScienceDirect 
 AFNet Algorithm for Automatic Amniotic Fluid Segmentation from Fetal MRI 
